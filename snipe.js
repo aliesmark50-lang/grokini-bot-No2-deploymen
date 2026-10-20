@@ -1241,20 +1241,17 @@ async function showMainMenu(ctx, edit = false) {
     : `💼 *Wallet ${session.activeWalletIndex + 1}/${session.wallets.length}*\n\`${shortenAddress(wallet.publicKey)}\`\n💰 ${balance?.toFixed(4) || '?'} SOL ${solPrice ? `($${usdValue.toFixed(2)})` : ''} ${errMsg}`;
 
   const text = `
-👋 *Welcome to Axiom Trading Bot* 🤖
+‎⭐️ Welcome to Axiom, the one-stop solution for all your trading needs!
 
-*What I do for you:* ⬇️
-📊 Scan the market to tell you what to buy, ignore, or stalk
-🎯 Execute entries & exits with sniper-level timing
-🧠 Detect traps, fake pumps, and incoming dumps before they hit
+🔗 Chains: Enable/disable chains
+⚙️ Global Settings: Customize the bot.
 ⚡ Operate at machine-speed — no lag, no emotion
 🔒 Secured with Bitcoin-grade architecture
-🚀 Track price action past your take-profit so winners keep running 🏃
+🕓 Active Orders: Active buy/sell limit orders.
 ━━━━━━━━━━━━━━━━━━
-${walletLine}
 
-Paste any Solana contract address to analyze
-  `;
+⚡ Paste a token CA to trade immediately!
+
 
   const keyboard = Markup.inlineKeyboard([
     [Markup.button.callback('💼 Wallet', 'menu_wallet'), Markup.button.callback('📊 Positions', 'menu_positions')],
