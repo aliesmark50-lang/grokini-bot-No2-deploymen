@@ -1,5 +1,5 @@
 // ============================================
-//AXIOM TRADING BOT - Complete Implementation
+//COVE TRADING BOT - Complete Implementation
 // with Debug Logging & Professional Messages 
 // ============================================
 import { Telegraf, Markup } from 'telegraf';
@@ -1241,23 +1241,21 @@ async function showMainMenu(ctx, edit = false) {
     : `💼 *Wallet ${session.activeWalletIndex + 1}/${session.wallets.length}*\n\`${shortenAddress(wallet.publicKey)}\`\n💰 ${balance?.toFixed(4) || '?'} SOL ${solPrice ? `($${usdValue.toFixed(2)})` : ''} ${errMsg}`;
 
   const text = `
-‎⭐️ Welcome to Axiom, the one-stop solution for all your trading needs!
+‎ Cove Trading ⭐️
 
 🔗 Chains: Enable/disable chains
 ⚙️ Global Settings: Customize the bot.
-⚡ Operate at machine-speed — no lag, no emotion
-🔒 Secured with Bitcoin-grade architecture
+🔒 Make sure your Telegram is secure by enabling 2FA.
 🕓 Active Orders: Active buy/sell limit orders.
 ━━━━━━━━━━━━━━━━━━
-
 ⚡ Paste a token CA to trade immediately!
 
 
   const keyboard = Markup.inlineKeyboard([
-    [Markup.button.callback('💼 Wallet', 'menu_wallet'), Markup.button.callback('📊 Positions', 'menu_positions')],
+    [Markup.button.callback('🧳 Wallet', 'menu_wallet'), Markup.button.callback('📊 Positions', 'menu_positions')],
     [Markup.button.callback('🚀 Buy', 'menu_buy'), Markup.button.callback('💸 Sell', 'menu_sell')],
     [Markup.button.callback('📜 Trade History', 'menu_history')],
-    [Markup.button.callback('📈 PNL Report', 'menu_pnl_report')],
+    [Markup.button.callback('💹 PNL Report', 'menu_pnl_report')],
     [Markup.button.callback('⭐ Tracked Tokens', 'menu_tracked'), Markup.button.callback('🔔 Price Alerts', 'menu_alerts')],
     [Markup.button.callback('👥 Copy Trade', 'menu_copytrade'), Markup.button.callback('📈 Limit Orders', 'menu_limit')],
     [Markup.button.callback('⚙️ Settings', 'menu_settings'), Markup.button.callback('🎁 Referrals', 'menu_referrals')],
